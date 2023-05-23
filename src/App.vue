@@ -1,26 +1,46 @@
+/* eslint-disable */ 
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="main-page">
+    <HeaderH />
+    <div class="main">
+      <SideBar />
+      <ColumnSide />
+      </div>
+      <div class="cam">
+      <cameraC />
+      <NewTab />
+    </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import HeaderH from "./components/HeaderH.vue";
+import SideBar from "./components/SideBar.vue"
+import ColumnSide from "./components/ColumnSide.vue";
+import cameraC from "./components/cameraC.vue";
+import NewTab from "./components/NewTab.vue"
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    HeaderH,
+    SideBar,
+    ColumnSide,
+    cameraC,
+    NewTab
+  },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+.main {
+  display: flex;
 }
 </style>
